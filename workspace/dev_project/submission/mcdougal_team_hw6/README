@@ -1,0 +1,43 @@
+---------------------------------------------
+-- README
+-- Random Sheet Music Generation Project
+---------------------------------------------
+Team: Cedric McDougal (mcdougal.ce@gmail.com)
+      Kevin Castiglia ()
+      Ben Johnson ()
+
+
+--------------
+Disclaimer
+--------------
+
+This application is a PROTOTYPE. It does not generate good music. However,
+it does allow for some control over the output with a limited input
+configuration file.
+
+
+---------------------------
+How To Compile and Run
+---------------------------
+
+1. Navigate to the top-level directory.
+2. Type 'make' and press Enter.
+3. Navigate to the 'bin' directory.
+4. Type './c4500 <inputFileName> <outputFileName>' where <inputFileName> is
+   the name of your input file, and <outputFileName> is the name of your
+   output file.
+5. Press Enter.
+
+
+--------------------
+Notes On Input
+--------------------
+
+The following properties are configurable through the input file:
+
+1. Instrument:
+   soprano recorder, alto recorder, concert flute, oboe, bassoon, violin
+   cello, guitar, and piano
+2. Time Signature
+3. Key Signature
+4. Length in measures

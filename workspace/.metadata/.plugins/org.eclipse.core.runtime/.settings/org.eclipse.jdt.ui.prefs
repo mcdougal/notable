@@ -1,0 +1,21 @@
+#Wed Apr 18 19:42:45 EDT 2012
+content_assist_proposals_foreground=0,0,0
+spelling_locale_initialized=true
+org.eclipse.jdt.ui.text.templates_migrated=true
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Monospace|10.0|0|GTK|1|;
+tabWidthPropagated=true
+LexicalSortingAction.isChecked=true
+org.eclipse.jdt.ui.editor.tab.width=
+fontPropagated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+proposalOrderMigrated=true
+content_assist_proposals_background=255,255,255
+org.eclipse.jdt.ui.formatterprofiles.version=12
+content_assist_number_of_computers=13
+useQuickDiffPrefPage=true
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.Collection"><rhs name\="java.util.HashSet"/><rhs name\="java.util.LinkedList"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.HashSet"/><rhs name\="java.util.LinkedList"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.LinkedList"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="instruments.Instrument"><rhs name\="instruments.Instrument"/></lhs><lhs name\="music.TimeSignature"><rhs name\="music.TimeSignature"/></lhs><lhs name\="music.KeySignature"><rhs name\="music.KeySignature"/></lhs><lhs name\="io.InputData"><rhs name\="io.InputData"/></lhs><lhs name\="java.io.OutputStreamWriter"><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.io.Writer"><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.io.FileWriter"/><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.io.Flushable"><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.io.FileWriter"><rhs name\="java.io.FileWriter"/></lhs><lhs name\="instruments.Range"><rhs name\="instruments.Range"/></lhs><lhs name\="music.Note"><rhs name\="music.Note"/></lhs><lhs name\="music.Bar"><rhs name\="music.Bar"/></lhs><lhs name\="meta.Instrument"><rhs name\="meta.Instrument"/></lhs><lhs name\="music.Song"><rhs name\="music.Song"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="composition.Composition"><rhs name\="composition.Composition"/></lhs><lhs name\="composition.Instrument"><rhs name\="composition.Instrument"/></lhs><lhs name\="composition.KeySignature"><rhs name\="composition.KeySignature"/></lhs><lhs name\="app.Main"><rhs name\="app.Main"/></lhs><lhs name\="java.lang.Enum"><rhs name\="composition.CompositionConst$CLEF"/></lhs><lhs name\="composition.CompositionConst$CLEF"><rhs name\="composition.CompositionConst$CLEF"/></lhs><lhs name\="composition.music.Chord"><rhs name\="composition.music.Chord"/></lhs><lhs name\="composition.music.Phrase"><rhs name\="composition.music.Phrase"/></lhs><lhs name\="composition.music.Section"><rhs name\="composition.music.Section"/></lhs><lhs name\="composition.music.Measure"><rhs name\="composition.music.Measure"/></lhs><lhs name\="composition.music.Note"><rhs name\="composition.music.Note"/></lhs><lhs name\="java.lang.Number"><rhs name\="java.math.BigDecimal"/></lhs><lhs name\="java.math.BigDecimal"><rhs name\="java.math.BigDecimal"/></lhs><lhs name\="composition.meta.Instrument"><rhs name\="composition.meta.Instrument"/></lhs><lhs name\="composition.meta.TimeSignature"><rhs name\="composition.meta.TimeSignature"/></lhs><lhs name\="composition.meta.KeySignature"><rhs name\="composition.meta.KeySignature"/></lhs><lhs name\="java.util.Set"><rhs name\="java.util.HashSet"/></lhs><lhs name\="composition.music.MusicObject"><rhs name\="composition.music.Measure"/><rhs name\="composition.music.Beat"/><rhs name\="composition.music.Note"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="composition.LilyPondObject"><rhs name\="composition.music.Note"/></lhs></history>
+org.eclipse.jdt.ui.text.code_templates_migrated=true

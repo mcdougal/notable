@@ -1,0 +1,5 @@
+instrument:bassoon
+time signature:4/4
+key:C
+length: 30
+difficulty: 26

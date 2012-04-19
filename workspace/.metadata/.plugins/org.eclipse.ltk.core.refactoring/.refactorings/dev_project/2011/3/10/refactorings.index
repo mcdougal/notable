@@ -1,0 +1,72 @@
+1298937948099	Rename type 'CLEF'
+1298937962160	Rename type 'STYLE'
+1298941958453	Rename type 'SOPRANO_RECORDER'
+1298941985445	Rename type 'ALTO_RECORDER'
+1298941992555	Rename type 'CONCERT_FLUTE'
+1298941998092	Rename type 'OBOE'
+1298942003663	Rename type 'BASSOON'
+1298942010664	Rename type 'VIOLIN'
+1298942014825	Rename type 'CELLO'
+1298942019056	Rename type 'GUITAR'
+1298942022993	Rename type 'PIANO'
+1298942715141	Move compilation unit
+1298942725446	Move compilation unit
+1298942752096	Move compilation unit
+1298942770285	Rename package 'composition.objects'
+1298942780069	Move compilation unit
+1298942791751	Delete element
+1298942803907	Delete element
+1298942830521	Move compilation unit
+1298942835956	Move compilation unit
+1298942843218	Move compilation unit
+1298942848190	Move compilation unit
+1299018662666	Delete element
+1299018923555	Delete element
+1299021314035	Rename local variable 'chordPattern'
+1299021332441	Rename local variable 'chordPattern'
+1299021344138	Rename local variable 'chordPattern'
+1299021993210	Delete element
+1299026930859	Delete element
+1299196631814	Move member 'MAJOR_NOTE_INDICES'
+1299196659628	Move member 'MINOR_NOTE_INDICES'
+1299196711221	Move member 'NUM_NOTES'
+1299196719550	Move member 'REST'
+1299196724966	Move member 'C'
+1299196730341	Move member 'C_SHARP'
+1299196732997	Move member 'D'
+1299196735225	Move member 'D_SHARP'
+1299196741041	Move member 'E'
+1299196744642	Move member 'F'
+1299196746436	Move member 'F_SHARP'
+1299196748306	Move member 'G'
+1299196749966	Move member 'G_SHARP'
+1299196752966	Move member 'A'
+1299196755154	Move member 'A_SHARP'
+1299196757286	Move member 'B'
+1299196762763	Move member 'OCTAVE_0'
+1299196764426	Move member 'OCTAVE_1'
+1299196766336	Move member 'OCTAVE_2'
+1299196767786	Move member 'OCTAVE_3'
+1299196769376	Move member 'OCTAVE_4'
+1299196770816	Move member 'OCTAVE_5'
+1299196772586	Move member 'OCTAVE_6'
+1299196775001	Move member 'OCTAVE_7'
+1299196776441	Move member 'OCTAVE_8'
+1299196778651	Move member 'SHORTEST_DURATION'
+1299196812161	Move member 'DEFAULTS'
+1299196833678	Move member 'Clef'
+1299196838500	Move member 'Range'
+1299196862804	Move member 'SopranoRecorder'
+1299196865983	Move member 'AltoRecorder'
+1299196869893	Move member 'ConcertFlute'
+1299196883157	Move member 'Oboe'
+1299196886881	Move member 'Bassoon'
+1299196891440	Move member 'Violin'
+1299196895013	Move member 'Cello'
+1299196897562	Move member 'Guitar'
+1299196900502	Move member 'Piano'
+1299196912475	Delete element
+1299208894465	Rename method 'getNextNote'
+1299352445383	Rename field 'MAJOR_NOTE_INDICES'
+1299352461454	Rename field 'MINOR_NOTE_INDICES'
+1299355748641	Rename local variable 'note'

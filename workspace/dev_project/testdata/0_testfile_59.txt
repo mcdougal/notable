@@ -1,0 +1,5 @@
+instrument:guitar
+time signature:8/8
+key:B
+length: 35
+difficulty: 59

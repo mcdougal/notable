@@ -1,0 +1,519 @@
+package parser;
+
+import instruments.Instrument;
+import instruments.Range;
+import io.InputData;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+
+import music.KeySignature;
+import music.TimeSignature;
+
+/**
+ * Parses input file in order to extract configuration information for the
+ * sheet music generation application. Converts extracted configuration into
+ * an internally recognized format and returns an object encapsulating this
+ * information.
+ * 
+ * @author mcdougal
+ * @since 2/24/11
+ */
+public class InputParser {
+	
+    //
+    // TERMINAL STRINGS
+    //
+	
+	// tags for determining which property is being set
+	private static final String INSTRUMENT_TAG = "instrument:";
+	private static final String TIME_SIG_TAG = "time signature:";
+	private static final String KEY_TAG = "key:";
+	private static final String LENGTH_TAG = "length:";
+	
+	// separates upper integer of time signature from lower integer
+	private static final String TIME_SIG_DELIMETER = "/";
+	
+	// supported instruments
+	private static final String[] INSTRUMENTS =
+		{"soprano recorder", "alto recorder", "concert flute", "oboe",
+		 "bassoon", "violin", "cello", "guitar", "piano"};
+	
+	// represents major or minor keys
+	private static final String MAJOR_KEY = "major";
+	private static final String MINOR_KEY = "minor";
+	
+	// supported pitches for key signature
+	private static final String[] PITCHES =
+		{"Ab", "A", "A#", "Bb", "B", "B#", "Cb", "C", "C#", "Db", "D", "D#",
+		 "Eb", "E", "E#", "Fb", "F", "F#", "Gb", "G", "G#"};
+	
+	// digits used to construct integers
+	private static final String[] DIGITS =
+		{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+	
+    //
+    // INSTANCE VARIABLES
+    //
+
+	/** Prints debug information and more detailed errors when set to true */
+	private boolean debug = false;
+	
+	/** Stores all text read from the input file */
+	private String fileContents;
+	
+	/** Stores characters as they are read in order to rollback read position */
+	private String tempString;
+	
+	/** Index within the input String that will be read next */
+	private int currentPosition;
+	
+	/** Internal format for parsed data; returned upon successful parsing */
+	private InputData data;
+	
+    //
+    // PARSING
+    //
+	
+	/**
+	 * Parses a file following the specification defined at:
+	 * http://www.ccs.neu.edu/course/cs4500wc/assignment5.txt
+	 * 
+	 * @param fileName the name of the file to parse
+	 * @return an Object encapsulating the internal representation of the parsed data
+	 * @throws Exception if there is an error reading or parsing the file
+	 */
+	public InputData parse(String fileName) throws Exception {
+		try {
+			fileContents = readFile(fileName);
+			
+			setDefaults();
+			input();
+			
+			return data;
+		}
+		catch (Exception e) {
+			if (debug)
+				e.printStackTrace();
+			
+			throw e;
+		}
+	}
+
+	/**
+	 * Reads every character in the input file into a String.
+	 * 
+	 * @param fileName the name 
+	 */
+	private String readFile(String fileName) throws Exception {
+		File file = new File(fileName);
+		
+		BufferedReader reader = new BufferedReader(new FileReader(file));
+		StringBuffer buffer = new StringBuffer();
+		
+		int nextChar = reader.read();
+		while (nextChar != -1){
+			buffer.append((char)nextChar);
+			nextChar = reader.read();
+		}
+		
+		return buffer.toString();
+	}
+	
+    //
+    // NON-TERMINAL DEFINITIONS
+    //
+	
+	/**
+	 * 
+	 */
+	private void input() throws Exception {
+		currentPosition = -1;
+		tempString = "";
+		
+		if (!hasNextChar())
+			return;
+		
+		instrumentSpec();
+		timeSpec();
+		keySpec();
+		lengthSpec();
+		endOfFile();
+	}
+	
+	/**
+	 * 
+	 */
+	private void instrumentSpec() {
+		tempString = "";
+		
+		try {
+			whitespace();
+			getNextValue(INSTRUMENT_TAG, true);
+			whitespace();
+			instrument();
+			whitespace();
+			ls();
+		}
+		catch (Exception e) {
+			rollback(tempString.length());
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void timeSpec() {
+		tempString = "";
+		
+		try {
+			whitespace();
+			getNextValue(TIME_SIG_TAG, true);
+			whitespace();
+			setBeatsPerMeasure(integer(new StringBuffer()));
+			getNextValue(TIME_SIG_DELIMETER, true);
+			setNoteValuePerBeat(integer(new StringBuffer()));
+			whitespace();
+			ls();
+		}
+		catch (Exception e) {
+			rollback(tempString.length());
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void keySpec() {
+		tempString = "";
+		
+		try {
+			whitespace();
+			getNextValue(KEY_TAG, true);
+			whitespace();
+			key();
+			whitespace();
+			ls();
+		}
+		catch (Exception e) {
+			rollback(tempString.length());
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void lengthSpec() {
+		tempString = "";
+		
+		try {
+			whitespace();
+			getNextValue(LENGTH_TAG, true);
+			whitespace();
+			setLength(integer(new StringBuffer()));
+			whitespace();
+			ls();
+		}
+		catch (Exception e) {
+			rollback(tempString.length());
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void instrument() throws Exception {
+		setInstrument(getNextValue(INSTRUMENTS, true));
+	}
+	
+	/**
+	 * 
+	 */
+	private void key() throws Exception {
+		String pitch = pitch();
+		String scale = "";
+		
+		whitespace();
+		
+		if (nextValueEquals(MAJOR_KEY))
+			scale = getNextValue(MAJOR_KEY, true);
+		else if (nextValueEquals(MINOR_KEY))
+			scale = getNextValue(MINOR_KEY, true);
+		
+		setKeySignature(pitch, scale);
+	}
+	
+	/**
+	 * 
+	 */
+	private String pitch() throws Exception {
+		return getNextValue(PITCHES, true);
+	}
+	
+	/**
+	 * 
+	 */
+	private int integer(StringBuffer accumulator) throws Exception {
+		if (!nextValueIsOneOf(DIGITS))
+			return Integer.parseInt(accumulator.toString());
+		
+		accumulator.append(digit());
+		return integer(accumulator);
+	}
+	
+	/**
+	 * 
+	 */
+	private String digit() throws Exception {
+		return getNextValue(DIGITS, true);
+	}
+	
+	/**
+	 * 
+	 */
+	private void whitespace() {
+		if (getNextChar(false) != ' ')
+			return;
+		
+		getNextChar(true);
+		whitespace();
+	}
+	
+	/**
+	 * 
+	 */
+	private void ls() throws Exception {
+		char ch = getNextChar(true);
+		
+		if (ch == '\r'){
+			if (hasNextChar() && getNextChar(true) != '\n')
+				rollback();
+		}
+		
+		else if (ch != '\n'){
+			throw new Exception("ERROR: Line seperator expected. "
+					+ "Received: "+ch);
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void endOfFile() throws Exception {
+		if (hasNextChar())
+			throw new Exception("End of file expected.");
+	}
+
+    //
+    // HELPER METHODS
+    //
+	
+	/**
+	 * 
+	 */
+	private boolean nextValueIsOneOf(String[] possibleValues) {
+		try {
+			getNextValue(possibleValues, false);
+			return true;
+		}
+		catch (Exception e){
+			return false;
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private String getNextValue(String[] possibleValues, boolean read)
+	throws Exception {
+		
+		List<String> matches = new ArrayList<String>();
+		
+		for (int i = 0; i < possibleValues.length; i++){
+			if (nextValueEquals(possibleValues[i]))
+				matches.add(possibleValues[i]);
+		}
+		
+		if (matches.size() == 0)
+			throw new Exception("Unable to read any of the expected values.");
+		
+		String match = getLongestString(matches);
+		
+		if (read)
+			getNextValue(match, true);
+		return match;
+	}
+	
+	/**
+	 * 
+	 */
+	private boolean nextValueEquals(String expectedValue) {
+		try {
+			return getNextValue(expectedValue, false).equals(expectedValue);
+		}
+		catch (Exception e) {
+			return false;
+		}
+	}
+
+	/**
+	 * 
+	 */
+	private String getNextValue(String expectedValue, boolean read)
+	throws Exception {
+		
+		String nextValue = getNextNChars(expectedValue.length(), read);
+		
+		if (nextValue.equals(expectedValue))
+			return nextValue;
+
+		throw new Exception("Unable to read the expected value.");
+	}
+	
+	/**
+	 * 
+	 */
+	private boolean hasNextChar() {
+		return hasNMoreChars(1);
+	}
+	
+	/**
+	 * 
+	 */
+	private char getNextChar(boolean read) {
+		return getNextNChars(1, read).charAt(0);
+	}
+
+	/**
+	 * 
+	 */
+	private boolean hasNMoreChars(int n) {
+		try {
+			getNextNChars(n, false);
+			return true;
+		}
+		catch (Exception e) {
+			return false;
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private String getNextNChars(int n, boolean read) {
+		String nextChars = fileContents.substring(
+				currentPosition + 1, currentPosition + n + 1);
+		
+		if (read) {
+			tempString = tempString + nextChars;
+			currentPosition += n;
+		}
+
+		return nextChars;
+	}
+	
+	/**
+	 * 
+	 */
+	private void rollback() {
+		rollback(1);
+	}
+	
+	/**
+	 * 
+	 * @param n
+	 */
+	private void rollback(int n) {
+		currentPosition -= n;
+		
+		tempString = tempString.substring(0, n);
+	}
+	
+	/**
+	 * 
+	 */
+	private String getLongestString(List<String> list) {
+		String longest = list.get(0);
+		
+		for (int i = 1; i < list.size(); i++){
+			if (list.get(i).length() > longest.length())
+				longest = list.get(i);
+		}
+		
+		return longest;
+	}
+	
+	//
+	// CONVERSION METHODS
+	//
+	
+	/**
+	 * 
+	 */
+	private void setDefaults() {
+		Range range = new Range(800, 1000);
+		List<Range> rangeList = new ArrayList<Range>();
+		rangeList.add(range);
+		Instrument instrument = new Instrument(INSTRUMENTS[0], rangeList, 4);
+		List<Instrument> instruments = new ArrayList<Instrument>();
+		instruments.add(instrument);
+		
+		TimeSignature timeSignature = new TimeSignature(4, 4);
+		KeySignature keySignature = KeySignature.C_MAJOR;
+		
+		data = new InputData();
+		data.setInstruments(instruments);
+		data.setTimeSignature(timeSignature);
+		data.setKeySignature(keySignature);
+		data.setLength(32);
+		
+		
+	}
+	
+	/**
+	 * 
+	 */
+	private void setInstrument(String instrumentName) {
+		Instrument instrument = new Instrument(instrumentName, new ArrayList<Range>(), 4);
+		
+		List<Instrument> instruments = new ArrayList<Instrument>();
+		instruments.add(instrument);
+		
+		data.setInstruments(instruments);
+	}
+	
+	/**
+	 * 
+	 */
+	private void setBeatsPerMeasure(int value) {
+		data.getTimeSignature().setBeatsPerMeasure(value);
+	}
+	
+	/**
+	 * 
+	 */
+	private void setNoteValuePerBeat(int value) {
+		data.getTimeSignature().setNoteValuePerBeat(value);
+	}
+	
+	/**
+	 * 
+	 */
+	private void setKeySignature(String pitch, String scale) {
+		boolean major = scale.equals(MAJOR_KEY) || scale.equals("");
+		
+		// TODO
+			
+	}
+	
+	/**
+	 * 
+	 */
+	private void setLength(int length) {
+		data.setLength(length);
+	}
+	
+}

@@ -1,0 +1,5 @@
+
+cd ../
+LilyPond *.ly
+
+pause

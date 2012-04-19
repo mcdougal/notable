@@ -1,0 +1,4 @@
+Questions for project:
+
+- save configurations?
+- generate accompaniment?

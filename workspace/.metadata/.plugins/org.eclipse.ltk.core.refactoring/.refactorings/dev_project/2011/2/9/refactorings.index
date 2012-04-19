@@ -1,0 +1,50 @@
+1298428077671	Rename package 'music.genre'
+1298428111961	Delete elements
+1298577855327	Rename method 'genereateNextNote'
+1298599753723	Delete element
+1298599880940	Delete element
+1298602723801	Delete element
+1298602728669	Delete element
+1298604004485	Delete element
+1298604008226	Delete element
+1298610482358	Delete element
+1298611397136	Delete elements
+1298611499794	Move compilation unit
+1298611517490	Move compilation unit
+1298611527802	Delete element
+1298611554344	Move compilation unit
+1298611580319	Delete element
+1298611596689	Delete element
+1298611610269	Delete element
+1298613356065	Move compilation unit
+1298613370192	Move compilation unit
+1298614465045	Rename field 'noteValuePerBeat'
+1298614479403	Rename method 'getNoteValuePerBeat'
+1298614494003	Rename method 'setNoteValuePerBeat'
+1298614535359	Rename type 'Bar'
+1298614723027	Move compilation unit
+1298614734236	Move compilation unit
+1298614739239	Delete element
+1298614755245	Move compilation unit
+1298614764818	Move compilation unit
+1298614773461	Move compilation unit
+1298614782256	Move compilation unit
+1298614789483	Move compilation unit
+1298614798219	Move compilation unit
+1298614800769	Delete element
+1298614806923	Delete element
+1298614829914	Move compilation unit
+1298614847153	Rename type 'Constants'
+1298614998940	Delete element
+1298615007324	Delete element
+1298616276174	Delete element
+1298616380538	Rename field 'INSTRUMENTS'
+1298617033408	Move compilation unit
+1298617036766	Delete element
+1298617050806	Rename type 'RepConvertor'
+1298618114930	Rename type 'FileIOReader'
+1298621400024	Move compilation unit
+1298622263679	Rename type 'InputParserTests'
+1298623035835	Delete elements
+1298627670186	Delete element
+1298628514059	Delete element

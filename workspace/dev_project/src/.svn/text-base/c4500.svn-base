@@ -1,0 +1,3 @@
+#!/bin/sh
+
+java app.Main $1 $2

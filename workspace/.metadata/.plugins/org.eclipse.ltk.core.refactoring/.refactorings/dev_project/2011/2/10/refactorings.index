@@ -1,0 +1,6 @@
+1298932563485	Rename field 'DEBUG'
+1298933810357	Rename field 'note'
+1298933823808	Rename method 'getNote'
+1298934431662	Rename type 'Note'
+1298935515083	Rename field 'notes'
+1298935650017	Rename method 'getUniqueNoteValue'

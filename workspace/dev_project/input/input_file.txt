@@ -1,0 +1,4 @@
+instrument: piano
+time signature: 4/4
+key: F# minor
+difficulty: 51

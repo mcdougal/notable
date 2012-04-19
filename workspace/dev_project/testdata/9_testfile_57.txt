@@ -1,0 +1,5 @@
+instrument:piano
+time signature:4/4
+key:Abmajor
+length: 90
+difficulty: 57

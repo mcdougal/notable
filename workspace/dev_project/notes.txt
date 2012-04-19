@@ -1,0 +1,23 @@
+
+Algorithm
+----------
+
+: create phrase
+    : create interval pattern
+    : create length measures
+        : create n beat duration patterns where n 
+
+
+Public
+------
+
+- "note" : note name represented as a number (0 - 11) + rest (-1)
+  i.e. used for key
+
+- "Note" : note object with a name, octave (optional), and duration
+  i.e. exists within time
+
+- "length" : number of shortest supported durations
+
+- Every object in the "composition.music" package exists within time and
+  must be passed some length on construction

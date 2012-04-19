@@ -1,0 +1,37 @@
+1300034180264	Move member 'REST'
+1300034189663	Move member 'C'
+1300034195372	Move member 'C_SHARP'
+1300034201547	Move member 'D'
+1300034206996	Move member 'D_SHARP'
+1300034213478	Move member 'E'
+1300034220542	Move member 'F'
+1300034269442	Move member 'F_SHARP'
+1300034277445	Move member 'G'
+1300034283370	Move member 'G_SHARP'
+1300034289264	Move member 'A'
+1300034293823	Move member 'A_SHARP'
+1300034299284	Move member 'B'
+1300034321140	Move member 'OCTAVE_0'
+1300034325371	Move member 'OCTAVE_1'
+1300034329589	Move member 'OCTAVE_2'
+1300034332623	Move member 'OCTAVE_3'
+1300034335662	Move member 'OCTAVE_4'
+1300034338135	Move member 'OCTAVE_5'
+1300034340838	Move member 'OCTAVE_6'
+1300034343709	Move member 'OCTAVE_7'
+1300034345838	Move member 'OCTAVE_8'
+1300036761588	Delete elements
+1300049995429	Move compilation unit
+1300055659932	Rename type 'MusicObject'
+1300055676669	Rename type 'MusicObjectParent'
+1300055703603	Rename type 'MusicObjectContainer'
+1300061291566	Delete element
+1300062241837	Delete element
+1300064636839	Rename method 'generateContents'
+1300231791286	Move compilation unit
+1300233678958	Delete element
+1300233749768	Move compilation unit
+1300234286724	Encapsulate field 'numMeasures'
+1300241132800	Delete element
+1300242336851	Delete element
+1300394213833	Delete element

@@ -1,0 +1,5 @@
+instrument:bassoon
+time signature:3/4
+key:B#
+length: 96
+difficulty: 51

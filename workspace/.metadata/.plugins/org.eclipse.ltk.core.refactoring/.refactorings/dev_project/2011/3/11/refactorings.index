@@ -1,0 +1,6 @@
+1299807719946	Rename local variable 'nLength'
+1299807747428	Rename field 'duration'
+1299807830948	Rename method 'getDuration'
+1299807838439	Rename method 'setDuration'
+1299808432723	Rename local variable 'duration'
+1299808442364	Rename local variable 'noteLength'
