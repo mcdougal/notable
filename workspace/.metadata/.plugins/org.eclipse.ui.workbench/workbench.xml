@@ -24,7 +24,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -33,21 +33,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="notes.txt" partName="notes.txt" path="/host/Users/mcdougal/Stuff/School Stuff/NU Year 3/Spring 2011/cs4500_dev/workspace/dev_project/notes.txt" title="notes.txt" tooltip="dev_project/notes.txt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dev_project/notes.txt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="README" partName="README" path="/home/mcdougal/projects/cs4500_dev/workspace/dev_project/src/README" title="README" tooltip="dev_project/src/README" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/dev_project/src/README"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
@@ -335,178 +324,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/parent/Section.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/Composition.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/parent/MusicParent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/parent/Song.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/parent/Phrase.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/node/MusicNode.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/node/Note.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/node/Chord.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/transformation/Transformation.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/transformation/Chordify.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/transformation/Complicate.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/util/Debug.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/util/FileIO.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/app/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/dev_project/src/composition/music/transformation/Chordify.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/dev_project/notes.txt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/sandbox/src/Sandbox.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/dev_project/src/README"/>
-</editors>
-<item historyLabel="Composition.java" index="1">
-<position info="not_deleted" x="2859" y="0"/>
-</item>
-<item historyLabel="Song.java" index="3">
-<position info="not_deleted" x="679" y="4"/>
-</item>
-<item historyLabel="Song.java" index="3">
-<position info="not_deleted" x="1411" y="0"/>
-</item>
-<item historyLabel="Song.java" index="3">
-<position info="not_deleted" x="2298" y="0"/>
-</item>
-<item historyLabel="Section.java" index="0">
-<position info="not_deleted" x="746" y="7"/>
-</item>
-<item historyLabel="Section.java" index="0">
-<position info="not_deleted" x="2825" y="0"/>
-</item>
-<item historyLabel="Song.java" index="3">
-<position info="not_deleted" x="2298" y="0"/>
-</item>
-<item historyLabel="Composition.java" index="1">
-<position info="not_deleted" x="2859" y="0"/>
-</item>
-<item historyLabel="Phrase.java" index="4">
-<position info="not_deleted" x="4031" y="0"/>
-</item>
-<item historyLabel="Composition.java" index="1">
-<position info="not_deleted" x="2859" y="0"/>
-</item>
-<item historyLabel="MusicNode.java" index="5">
-<position/>
-</item>
-<item historyLabel="Note.java" index="6">
-<position info="not_deleted" x="686" y="0"/>
-</item>
-<item historyLabel="MusicNode.java" index="5">
-<position/>
-</item>
-<item historyLabel="Chord.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Note.java" index="6">
-<position info="not_deleted" x="2891" y="0"/>
-</item>
-<item historyLabel="MusicNode.java" index="5">
-<position/>
-</item>
-<item historyLabel="Note.java" index="6">
-<position info="not_deleted" x="3449" y="0"/>
-</item>
-<item historyLabel="MusicNode.java" index="5">
-<position/>
-</item>
-<item historyLabel="Note.java" index="6">
-<position info="not_deleted" x="4623" y="0"/>
-</item>
-<item historyLabel="Chord.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Chord.java" index="7">
-<position info="not_deleted" x="1179" y="0"/>
-</item>
-<item historyLabel="Chord.java" index="7">
-<position info="not_deleted" x="2441" y="0"/>
-</item>
-<item historyLabel="Note.java" index="6">
-<position info="not_deleted" x="4623" y="0"/>
-</item>
-<item historyLabel="MusicNode.java" index="5">
-<position/>
-</item>
-<item historyLabel="Composition.java" index="1">
-<position info="not_deleted" x="3300" y="0"/>
-</item>
-<item historyLabel="MusicParent.java" index="2">
-<position info="not_deleted" x="2615" y="19"/>
-</item>
-<item historyLabel="MusicNode.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MusicParent.java" index="2">
-<position info="not_deleted" x="2615" y="19"/>
-</item>
-<item historyLabel="MusicNode.java" index="5">
-<position info="not_deleted" x="1800" y="0"/>
-</item>
-<item historyLabel="MusicParent.java" index="2">
-<position info="not_deleted" x="2718" y="0"/>
-</item>
-<item historyLabel="Composition.java" index="1">
-<position info="not_deleted" x="3300" y="0"/>
-</item>
-<item historyLabel="Transformation.java" index="8">
-<position info="not_deleted" x="968" y="0"/>
-</item>
-<item historyLabel="Chordify.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Complicate.java" index="10">
-<position info="not_deleted" x="2966" y="0"/>
-</item>
-<item historyLabel="Chordify.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Composition.java" index="1">
-<position info="not_deleted" x="4620" y="29"/>
-</item>
-<item historyLabel="Debug.java" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="FileIO.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Debug.java" index="11">
-<position info="not_deleted" x="1824" y="0"/>
-</item>
-<item historyLabel="FileIO.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Composition.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Main.java" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Chordify.java" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Main.java" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="notes.txt" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="notes.txt" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Sandbox.java" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Sandbox.java" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="notes.txt" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="README" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
